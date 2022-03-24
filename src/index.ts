@@ -24,5 +24,6 @@ const genesisBlock: Block = new Block(0, "203230", "", "hello", 123456);
 let blockchain: [Block] = [genesisBlock];
 
 console.log(blockchain);
+console.log(blockchain);
 
 export {};
