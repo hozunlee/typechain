@@ -24,5 +24,6 @@ const sayHi = (person: Human): string => {
 
 console.log(sayHi(lynn));
 
+
 export {};
 // 이 파일이 모듈이 된다는 것을 이해시킴
