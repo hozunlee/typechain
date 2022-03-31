@@ -1,28 +1,28 @@
-class Block {
-    public index: number;
-    public hash: string;
-    public previosHash: string;
-    public data: string;
-    public timestamp: number;
-    constructor(
-        index: number,
-        hash: string,
-        previosHash: string,
-        data: string,
-        timestamp: number
-    ) {
-        this.index = index;
-        this.hash = hash;
-        this.previosHash = previosHash;
-        this.data = data;
-        this.timestamp = timestamp;
+// interface Human {
+//     name: string;
+//     age: number;
+//     gender: string;
+// }
+
+//class는 코드를 컨트롤 할 수 있도록 해줌
+class Human {
+    public name: string;
+    private age: number;
+    public gender: string;
+    constructor(name: string, age: number, gender: string) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
     }
 }
 
-const genesisBlock: Block = new Block(0, "203230", "", "hello", 123456);
+const lynn = new Human("Lynn", 18, "female");
 
-let blockchain: [Block] = [genesisBlock];
+const sayHi = (person: Human): string => {
+    return `Hello, your are ${person.name}, right?. you are ${person.age}, you are a ${person.gender}`;
+};
 
-console.log(blockchain);
+console.log(sayHi(lynn));
 
 export {};
+// 이 파일이 모듈이 된다는 것을 이해시킴
